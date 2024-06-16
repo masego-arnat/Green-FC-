@@ -126,7 +126,7 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+                    <p class="m-0 text-center text-white">Copyright &copy; Your Website <span id="demo"></span></p>
 
 
                 </div>
@@ -151,6 +151,12 @@
         crossorigin="anonymous"></script>
 
     <script>
+
+    
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("demo").innerHTML = year;
+   
         $(document).ready(function () {
             $("#submit").click(function () {
                 $("#submit").hide();
